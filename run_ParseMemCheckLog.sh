@@ -23,6 +23,7 @@ runInit()
   let "AllocatedNum = 0"
   let "FreeNum      = 0"
   let "LeakSize     = 0"
+  let "OverallLeakSize = 0"
 
   echo "${OutFile}" >${OutFile}
   echo "*********start to parse*************"
@@ -43,6 +44,44 @@ runParse()
   done < ${LogFile}
 
 }
+
+runCheckLeakWithAllBuffer()
+{
+    let "AllocateSize = 0"
+    let "FreeSize     = 0"
+    let "AllocatedNum = 0"
+    let "FreeNum      = 0"
+
+    MemLeakStatus="True"
+    while read line
+    do
+        if [[ "$line" =~ "WelsMalloc()" ]]
+        then
+            TempAllocatedSize=`echo $line | awk 'BEGIN {FS="actual uiSize:"} {print $2}' | awk '{print $1}'`
+            let "AllocatedNum ++"
+            let "AllocateSize += ${TempAllocatedSize}"
+
+        elif [[ "$line" =~ "WelsFree()" ]]
+        then
+            TempFreeSize=`echo $line | awk 'BEGIN {FS=":"} {print $2}' | awk '{print $1}'`
+            let "FreeNum ++"
+            let "FreeSize += ${TempFreeSize}"
+        fi
+    done <${LogFile}
+
+    [ ${AllocateSize} -eq ${FreeSize} ] && [ ${AllocatedNum} -eq ${FreeNum} ] && MemLeakStatus="False"
+    if [ "$MemLeakStatus" = "True" ]
+    then
+        echo "${BufferName}" >>${LeakBufferNameList}
+    fi
+
+    let "OverallLeakSize  = ${AllocateSize} - ${FreeSize}"
+
+    OverAllSummary="MemLeakStatus $MemLeakStatus: AllocatedNum--FreeNum ($AllocatedNum--$FreeNum) : AllocateSize==FreeSize==LeakSize ($AllocateSize==$FreeSize==$OverallLeakSize) "
+    echo ${OverAllSummary}>>${OutFile}
+
+}
+
 
 runCheckLeak()
 {
@@ -123,8 +162,6 @@ runGetBufferNameList()
   cat ${BufferNameList}
   echo "*******************************************"
   echo "*******************************************"
-  echo -e "\n\n"
-
 
 }
 
@@ -169,6 +206,7 @@ runOutputMemStatus()
   echo "*******************************************"
   echo "*******************************************"
   echo "over all leak size is ${LeakSize}"
+  echo " OverAllSummary is $OverAllSummary"
   echo "*******************************************"
   echo "*******************************************"
 }
@@ -182,6 +220,9 @@ runMain()
     runGetBufferNameList
     runCheckAllocateAndFree
     runGetLeakSize
+
+    runCheckLeakWithAllBuffer
+
     runOutputMemStatus >${Report}
     cat ${Report}
   else
