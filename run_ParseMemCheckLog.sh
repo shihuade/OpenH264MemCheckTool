@@ -12,7 +12,10 @@ runInit()
   MemCheckLog="MemCheck.log"
   BufferNameList="MemCheck_BufferNameList.txt"
   LeakBufferInfo="MemCheck_LeakBuffer.txt"
-  [ -e ${BufferNameList} ] && rm ${BufferNameList}
+  LeakBufferNameList="MemCheck_LeakBufferList.txt"
+  Report="MemCheck_Report.txt"
+  [ -e ${BufferNameList} ]     && rm ${BufferNameList}
+  [ -e ${LeakBufferNameList} ] && rm $LeakBufferNameList
 
   # Mem leak check info
   let "AllocateSize = 0"
@@ -43,6 +46,7 @@ runParse()
 
 runCheckLeak()
 {
+  MemCheckLogFile=$1
   let "AllocateSize = 0"
   let "FreeSize     = 0"
   let "AllocatedNum = 0"
@@ -74,14 +78,17 @@ runCheckLeak()
         #echo "TempFreeSize is $TempFreeSize"
       fi
     fi
-  done <${MemCheckLog}
+  done <${MemCheckLogFile}
 
   [ ${AllocateSize} -eq ${FreeSize} ] && [ ${AllocatedNum} -eq ${FreeNum} ] && MemLeakStatus="False"
+  if [ "$MemLeakStatus" = "True" ]
+  then
+    echo "${BufferName}" >>${LeakBufferNameList}
+  fi
 
   let "LeakSize  = ${AllocateSize} - ${FreeSize}"
 
   Summary="MemLeakStatus $MemLeakStatus: $BufferName AllocatedNum--FreeNum ($AllocatedNum--$FreeNum) : AllocateSize==FreeSize==LeakSize ($AllocateSize==$FreeSize==$LeakSize) "
-  echo ${Summary}
   echo ${Summary}>>${OutFile}
 
 }
@@ -109,14 +116,14 @@ runGetBufferNameList()
     fi
   done < ${LogFile}
 
-  echo -e "\n\n\n"
+  echo -e "\n\n"
   echo "*******************************************"
   echo "          Buffer name list:                "
   echo "*******************************************"
   cat ${BufferNameList}
   echo "*******************************************"
   echo "*******************************************"
-  echo -e "\n\n\n"
+  echo -e "\n\n"
 
 
 }
@@ -128,7 +135,7 @@ runCheckAllocateAndFree()
     BufferName="$line"
     cat ${LogFile} | grep "${BufferName}" > ${MemCheckLog}
     #cat ${LogFile} | grep "${line}"
-    runCheckLeak
+    runCheckLeak ${MemCheckLog}
 
   done < ${BufferNameList}
 
@@ -146,11 +153,17 @@ runGetLeakSize()
   done <${LeakBufferInfo}
 }
 
-runOutputLeakSize()
+runOutputMemStatus()
 {
-  echo -e "\n\n\n"
+  echo -e "\n\n"
+  echo "*******************************************"
+  echo "           Buffer status:                     "
+  echo "*******************************************"
+  cat ${OutFile}
   echo "*******************************************"
   echo "            Leak info:                     "
+  echo "*******************************************"
+  cat ${LeakBufferNameList}
   echo "*******************************************"
   cat ${LeakBufferInfo}
   echo "*******************************************"
@@ -169,7 +182,8 @@ runMain()
     runGetBufferNameList
     runCheckAllocateAndFree
     runGetLeakSize
-    runOutputLeakSize
+    runOutputMemStatus >${Report}
+    cat ${Report}
   else
     runParse
   fi
