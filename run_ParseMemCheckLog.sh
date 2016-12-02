@@ -35,13 +35,34 @@ runParse()
   do
     if [[ "$line" =~ "WelsFree()" ]]
     then
-         templine=`echo $line | awk 'BEGIN {FS="-"} {print $2}'`
+         templine=`echo $line | awk 'BEGIN {FS=" - "} {print $2}'`
     else
 	    templine=`echo $line | awk 'BEGIN {FS="actual uiSize:"} {print $2}'`
     fi
     echo ${templine} >>${OutFile}
 
   done < ${LogFile}
+
+}
+
+
+runParseEnhance()
+{
+    while read line
+    do
+        if [[ "$line" =~ "WelsFree()" ]]
+        then
+            BufferName=`echo $line    | awk 'BEGIN {FS=","} {print $1}'`
+            MemStatusInfo=`echo $line | awk 'BEGIN {FS=" - "} {print $2}' | awk 'BEGIN {FS="left"} {print $1}'`
+            templine="${BufferName}, WelsFree(), ${MemStatusInfo}"
+        else
+            BufferName=`echo $line    | awk 'BEGIN {FS=","} {print $1}'`
+            MemStatusInfo=`echo $line | awk 'BEGIN {FS=" - "} {print $1}' | awk 'BEGIN {FS="actual uiSize:"} {print $2}' | awk 'BEGIN {FS=" bytes"} {print $1}'`
+            templine="${BufferName}, WelsMalloc(), ${MemStatusInfo}"
+        fi
+        echo ${templine} >>${OutFile}
+
+    done < ${LogFile}
 
 }
 
@@ -79,6 +100,8 @@ runCheckLeakWithAllBuffer()
 
     OverAllSummary="MemLeakStatus $MemLeakStatus: AllocatedNum--FreeNum ($AllocatedNum--$FreeNum) : AllocateSize==FreeSize==LeakSize ($AllocateSize==$FreeSize==$OverallLeakSize) "
     echo ${OverAllSummary}>>${OutFile}
+
+    echo ${OverAllSummary}
 
 }
 
@@ -226,7 +249,8 @@ runMain()
     runOutputMemStatus >${Report}
     cat ${Report}
   else
-    runParse
+    #runParse
+    runParseEnhance
   fi
 
 
