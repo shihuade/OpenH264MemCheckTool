@@ -57,7 +57,7 @@ runParseInfo()
 
 runLoop()
 {
-  for((i=0; i<500; i++))
+  for((i=0; i<5000; i++))
   do
     echo "*********encode loop idx $i***************"
     ./${Encoder} ${EncCfg} >${EncoderLog}
