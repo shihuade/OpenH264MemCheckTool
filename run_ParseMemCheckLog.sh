@@ -1,4 +1,26 @@
 #!/bin/bash
+#*****************************************************************************
+#  brief:  1. parse memory allocate/free info based on memory statistic log
+#             ./enc_mem_check_point.txt
+#
+#          2. to generate above log file,
+#              need to enable below macro in codec/common/memory_align.h
+#              #define MEMORY_CHECK 1
+#
+#          3. the output may contain the summary of memory allocate/free
+#             statistic info during encoding process, and detail info of all
+#             buffers which have been allocated/freed during/after encoding process
+#
+#  usage:   ./run_ParseMemCheckLog.sh $LogFile $OutFile $Option
+#            ----LogFile: should be enc_mem_check_point.txt or other rename log file
+#            ----OutFile:  the final report file for memory statistic info
+#            ----Option:
+#                       1)MemCheck     :   all detail info
+#                       2)OverallCheck :   summary info only
+#
+#
+#*****************************************************************************
+
 
 runInit()
 {
@@ -76,13 +98,13 @@ runCheckLeakWithAllBuffer()
     MemLeakStatus="True"
     while read line
     do
-        if [[ "$line" =~ "WelsMalloc()" ]]
+        if [[ "$line" =~ "WelsMalloc" ]]
         then
             TempAllocatedSize=`echo $line | awk 'BEGIN {FS="actual uiSize:"} {print $2}' | awk '{print $1}'`
             let "AllocatedNum ++"
             let "AllocateSize += ${TempAllocatedSize}"
 
-        elif [[ "$line" =~ "WelsFree()" ]]
+        elif [[ "$line" =~ "WelsFree" ]]
         then
             TempFreeSize=`echo $line | awk 'BEGIN {FS=":"} {print $2}' | awk '{print $1}'`
             let "FreeNum ++"
@@ -118,7 +140,7 @@ runCheckLeak()
   MemLeakStatus="True"
   while read line
   do
-    if [[ "$line" =~ "WelsMalloc()" ]]
+    if [[ "$line" =~ "WelsMalloc" ]]
     then
       MatchInfo=`echo ${line} | grep " ${BufferName}"$ `
       if [ "${MatchInfo}X" != "X" ]
@@ -129,7 +151,7 @@ runCheckLeak()
         #echo "TempAllocatedSize is $TempAllocatedSize"
       fi
 
-    elif [[ "$line" =~ "WelsFree()" ]]
+    elif [[ "$line" =~ "WelsFree" ]]
     then
       MatchInfo=`echo ${line} | grep " ${BufferName}:" `
       if [ "${MatchInfo}X" != "X" ]
@@ -248,13 +270,33 @@ runMain()
 
     runOutputMemStatus >${Report}
     cat ${Report}
+  elif [[ "$Option" =~ "OverallCheck" ]]
+  then
+    runCheckLeakWithAllBuffer
+
+    runOutputMemStatus >${Report}
+    cat ${Report}
+
   else
     #runParse
-    runParseEnhance
+    #runParseEnhance
+    echo "current support option are:"
+    echo "  1) MemCheck     :   all detail info"
+    echo "  2) OverallCheck :   summary info only"
   fi
 
-
 }
+if [ ! $# -eq 3  ]
+then
+    echo "************************************************"
+    echo "usage: "
+    echo "$0  \$EncoderMemLogFile \$OutFile \$Option"
+    echo "    current support option are:"
+    echo "      1) MemCheck     :   all detail info"
+    echo "      2) OverallCheck :   summary info only"
+    echo "************************************************"
+    exit 1
+fi
 
 LogFile=$1
 OutFile=$2
