@@ -52,7 +52,7 @@ runGetYUVPath()
 if [ ! $# -eq 2 ]
 then
     echo "runGetYUVPath  \${YUVName}  \${FindScope} "
-    return 1
+    exit 1
 fi
 
 YUVName=$1

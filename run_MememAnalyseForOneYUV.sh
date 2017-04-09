@@ -28,8 +28,8 @@ runInit()
   PicH=${YUVInfo[1]}
 
   #codec app setting
-  #Encoder="encConsole"
-  Encoder="h264enc"
+  Encoder="encConsole"
+#Encoder="h264enc"
   EncCommand=""
   MemLogFile="enc_mem_check_point.txt"
 
@@ -51,6 +51,7 @@ runInitTestParam()
 {
    SlcMd=(0  1  2 3)
    SlcMum=(1 4  4 0 )
+   ThreadNum=(1 2 3 4)
    ParamNum=${#SlcMd[@]}
 }
 
@@ -75,19 +76,28 @@ run_AnalyseMemForAllParamSet()
 {
   for((i=0; i<${ParamNum}; i++))
   do
-     TestMemLogFile="${TestSpace}/enc_mem_check_point_${SlcMd[$i]}_${SlcMum[$i]}.txt"
-     [ -e ${MemLogFile} ] && rm ${MemLogFile}
+    for iThrdNum in ${ThreadNum[@]}
+    do
+      TestMemLogFile="${TestSpace}/enc_mem_check_point_${SlcMd[$i]}_${SlcMum[$i]}.txt"
+      [ -e ${MemLogFile} ] && rm ${MemLogFile}
 
-     EncCommand="./$Encoder  welsenc.cfg  -frms 64 -org ${YUVFile}"
-     EncCommand=" ${EncCommand} -slcmd 0 ${SlcMd[$i]}  -slcnum 0 ${SlcMum[$i]} -dw 0 ${PicW} -dh 0  ${PicH}"
-     echo "EncCommand is:"
-     echo "${EncCommand}"
-     ${EncCommand}
+      EncCommand="./$Encoder  welsenc.cfg  -frms 64 -org ${YUVFile} -thread ${iThrdNum}"
+      EncCommand=" ${EncCommand} -slcmd 0 ${SlcMd[$i]}  -slcnum 0 ${SlcMum[$i]} -dw 0 ${PicW} -dh 0  ${PicH}"
 
-     mv ${MemLogFile} ${TestMemLogFile}
+      echo ""
+      echo "***********************************************"
+      echo "EncCommand is:"
+      echo "${EncCommand}"
+      echo "***********************************************"
+      echo ""
+      ${EncCommand}
 
-    ./run_ParseMemCheckLog.sh ${TestMemLogFile} ${TestReport} ${MemAnalyseOption}
-done
+      mv ${MemLogFile} ${TestMemLogFile}
+
+      ./run_ParseMemCheckLog.sh ${TestMemLogFile} ${TestReport} ${MemAnalyseOption}
+
+    done
+  done
 
 
 
@@ -95,13 +105,11 @@ done
 
 runCheck()
 {
-  if [ -d ${YUVDir} ]
+  if [ ! -d ${YUVDir} ]
   then
     echo "error:: YUVDir $YUVDir not exist!"
     exit 1
   fi
-
-
 }
 
 runMain()
