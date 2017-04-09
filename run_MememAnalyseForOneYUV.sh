@@ -29,7 +29,7 @@ runInit()
 
   #codec app setting
   Encoder="encConsole"
-#Encoder="h264enc"
+  #Encoder="h264enc"
   EncCommand=""
   MemLogFile="enc_mem_check_point.txt"
 
@@ -43,6 +43,7 @@ runInit()
 
   #Test report file
   TestReport="${TestSpace}/MemReport_For_${YUVName}.csv"
+  echo "${YUVName}, SlcMd, SlcNum, PicW, PicH, ThrdNum, AllocSize, FreeSize, LeakSize">${TestReport}
 
 }
 
@@ -74,11 +75,19 @@ runOutputTestInfo()
 
 run_AnalyseMemForAllParamSet()
 {
+
+  MemAnalyseLog="Memory_Analyse_Summary.txt"
+  let "OverallAllocateSize = 0"
+  let "OverallFreeSize = 0"
+  let "OverallLeakSize = 0"
+  ReportInfo=""
+
   for((i=0; i<${ParamNum}; i++))
   do
     for iThrdNum in ${ThreadNum[@]}
     do
-      TestMemLogFile="${TestSpace}/enc_mem_check_point_${SlcMd[$i]}_${SlcMum[$i]}.txt"
+      TestMemLogFile="${TestSpace}/enc_mem_check_point_${YUVName}_${SlcMd[$i]}_${SlcMum[$i]}_${ThreadNum}.txt"
+      TestAnalyseResult="${TestSpace}/MemAnalyseResut_${YUVName}_${SlcMd[$i]}_${SlcMum[$i]}_${ThreadNum}.txt"
       [ -e ${MemLogFile} ] && rm ${MemLogFile}
 
       EncCommand="./$Encoder  welsenc.cfg  -frms 64 -org ${YUVFile} -thread ${iThrdNum}"
@@ -94,12 +103,27 @@ run_AnalyseMemForAllParamSet()
 
       mv ${MemLogFile} ${TestMemLogFile}
 
-      ./run_ParseMemCheckLog.sh ${TestMemLogFile} ${TestReport} ${MemAnalyseOption}
+      #memory analyse for one encoding param
+      ./run_ParseMemCheckLog.sh ${TestMemLogFile} ${TestAnalyseResult} ${MemAnalyseOption} >${MemAnalyseLog}
+
+      #parse analyse result
+      OverallAllocateSize=`cat ${MemAnalyseLog} | grep "Overall_AllocateSize" | awk '{print $2}'`
+      OverallFreeSize=`cat ${MemAnalyseLog} | grep "Overall_FreeSize" | awk '{print $2}'`
+      OverallLeakSize=`cat ${MemAnalyseLog} | grep "Overall_LeakSize" | awk '{print $2}'`
+
+      ReportInfo="${YUVName}, ${SlcMd[$i]}, ${SlcMum[$i]}, ${PicW}, ${PicH}, ${iThrdNum}"
+      ReportInfo="${ReportInfo}, ${OverallAllocateSize}, ${OverallFreeSize}, ${OverallLeakSize}"
+
+      echo " Overall_AllocateSize  $OverallAllocateSize"
+      echo " Overall_FreeSize      $OverallFreeSize"
+      echo " Overall_LeakSize      $OverallLeakSize"
+
+      echo "ReportInfo is: "
+      echo "${ReportInfo}"
+      echo "${ReportInfo}" >>${TestReport}
 
     done
   done
-
-
 
 }
 

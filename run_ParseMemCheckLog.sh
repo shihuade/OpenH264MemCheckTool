@@ -253,6 +253,10 @@ runOutputMemStatus()
   echo "over all leak size is ${LeakSize}"
   echo " OverAllSummary is $OverAllSummary"
   echo "*******************************************"
+  echo " Overall_AllocateSize  $AllocateSize"
+  echo " Overall_FreeSize      $FreeSize"
+  echo " Overall_LeakSize      $OverallLeakSize"
+  echo "*******************************************"
   echo "*******************************************"
 }
 
