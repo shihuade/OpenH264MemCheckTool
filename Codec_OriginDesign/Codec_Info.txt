@@ -5,8 +5,9 @@ CommitID: 01e31ffe532c1b16d4300ff06f0a081f075ff4f1
           commit before https://github.com/cisco/openh264/pull/2698
 #======================================================
 Build cfg:
-encConsole: Mac xcode build x86/Debug
-h264enc:    Mac Make defaule (x86/release)
+  ——enable macro: #define MEMORY_CHECK 1
+  —-encConsole: Mac xcode build x86/Debug
+  —-h264enc:    Mac Make defaule (x86/release)
 #======================================================
 Platform:
 Module:    MacBook Pro (Retina, 15-inch, Late 2013)
