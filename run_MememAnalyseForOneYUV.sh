@@ -36,7 +36,7 @@ runInit()
   #Test Space
   TestSpace="TestData"
   [ ! -d ${TestSpace} ] && mkdir ${TestSpace}
-  rm -f ${TestSpace}/*
+  #rm -f ${TestSpace}/*
 
   #Memory analyse option
   MemAnalyseOption="OverallCheck"
@@ -86,8 +86,8 @@ run_AnalyseMemForAllParamSet()
   do
     for iThrdNum in ${ThreadNum[@]}
     do
-      TestMemLogFile="${TestSpace}/enc_mem_check_point_${YUVName}_${SlcMd[$i]}_${SlcMum[$i]}_${ThreadNum}.txt"
-      TestAnalyseResult="${TestSpace}/MemAnalyseResut_${YUVName}_${SlcMd[$i]}_${SlcMum[$i]}_${ThreadNum}.txt"
+      TestMemLogFile="${TestSpace}/enc_mem_check_point_${YUVName}_${SlcMd[$i]}_${SlcMum[$i]}_${iThrdNum}.txt"
+      TestAnalyseResult="${TestSpace}/MemAnalyseResut_${YUVName}_${SlcMd[$i]}_${SlcMum[$i]}_${iThrdNum}.txt"
       [ -e ${MemLogFile} ] && rm ${MemLogFile}
 
       EncCommand="./$Encoder  welsenc.cfg  -frms 64 -org ${YUVFile} -thread ${iThrdNum}"
@@ -95,6 +95,8 @@ run_AnalyseMemForAllParamSet()
 
       echo ""
       echo "***********************************************"
+      echo "TestMemLogFile    is: ${TestMemLogFile}"
+      echo "TestAnalyseResult is: ${TestAnalyseResult}"
       echo "EncCommand is:"
       echo "${EncCommand}"
       echo "***********************************************"
