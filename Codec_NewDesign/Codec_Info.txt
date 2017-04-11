@@ -1,12 +1,13 @@
 #======================================================
 Repos:    git@github.com:shihuade/openh264.git
 Branch:   MultiThread_V11.0_Rename
-CommitID: 8ab17a8769578dd54947ef277d02fcc978c4aca8
+CommitID: fead4af938e9e2f5f281aff7657f9f5db14f754f
 #======================================================
 Build cfg:
   ——enable macro: #define MEMORY_CHECK 1
-  —-encConsole: Mac xcode build x86/Debug
-  —-h264enc:    Mac Make defaule (x86/release)
+  —-encConsole: Mac xcode build x86/Release
+  —-h264enc:    make ARCH=x86_64 BUILDTYPE=Release
+                make ARCH=i386   BUILDTYPE=Release
 #======================================================
 Platform:
 Module:    MacBook Pro (Retina, 15-inch, Late 2013)
