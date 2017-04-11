@@ -43,7 +43,7 @@ runInit()
 
   #Test report file
   TestReport="${TestSpace}/MemReport_For_${YUVName}.csv"
-  echo "${YUVName}, SlcMd, SlcNum, PicW, PicH, ThrdNum, AllocSize, FreeSize, LeakSize">${TestReport}
+  echo "${YUVName}, SlcMd, SlcNum, PicW, PicH, ThrdNum, AllocSize, FreeSize, LeakSize, FPS">${TestReport}
 
 }
 
@@ -77,9 +77,11 @@ run_AnalyseMemForAllParamSet()
 {
 
   MemAnalyseLog="Memory_Analyse_Summary.txt"
+  EncoderLog="EncoderCaseLog.txt"
   let "OverallAllocateSize = 0"
   let "OverallFreeSize = 0"
   let "OverallLeakSize = 0"
+  let "FPS = 0"
   ReportInfo=""
 
   for((i=0; i<${ParamNum}; i++))
@@ -101,7 +103,7 @@ run_AnalyseMemForAllParamSet()
       echo "${EncCommand}"
       echo "***********************************************"
       echo ""
-      ${EncCommand}
+      ${EncCommand} >${EncoderLog}
 
       mv ${MemLogFile} ${TestMemLogFile}
 
@@ -112,13 +114,15 @@ run_AnalyseMemForAllParamSet()
       OverallAllocateSize=`cat ${MemAnalyseLog} | grep "Overall_AllocateSize" | awk '{print $2}'`
       OverallFreeSize=`cat ${MemAnalyseLog} | grep "Overall_FreeSize" | awk '{print $2}'`
       OverallLeakSize=`cat ${MemAnalyseLog} | grep "Overall_LeakSize" | awk '{print $2}'`
+      FPS=`cat ${MemAnalyseLog} | grep "FPS" | awk '{print $2}'`
 
       ReportInfo="${YUVName}, ${SlcMd[$i]}, ${SlcMum[$i]}, ${PicW}, ${PicH}, ${iThrdNum}"
-      ReportInfo="${ReportInfo}, ${OverallAllocateSize}, ${OverallFreeSize}, ${OverallLeakSize}"
+      ReportInfo="${ReportInfo}, ${OverallAllocateSize}, ${OverallFreeSize}, ${OverallLeakSize}, ${FPS}"
 
       echo " Overall_AllocateSize  $OverallAllocateSize"
       echo " Overall_FreeSize      $OverallFreeSize"
       echo " Overall_LeakSize      $OverallLeakSize"
+      echo " FPS                   $FPS"
 
       echo "ReportInfo is: "
       echo "${ReportInfo}"
