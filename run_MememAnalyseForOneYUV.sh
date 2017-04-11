@@ -28,8 +28,8 @@ runInit()
   PicH=${YUVInfo[1]}
 
   #codec app setting
-  Encoder="encConsole"
-  #Encoder="h264enc"
+  #Encoder="encConsole"
+  Encoder="h264enc"
   EncCommand=""
   MemLogFile="enc_mem_check_point.txt"
 
@@ -114,7 +114,7 @@ run_AnalyseMemForAllParamSet()
       OverallAllocateSize=`cat ${MemAnalyseLog} | grep "Overall_AllocateSize" | awk '{print $2}'`
       OverallFreeSize=`cat ${MemAnalyseLog} | grep "Overall_FreeSize" | awk '{print $2}'`
       OverallLeakSize=`cat ${MemAnalyseLog} | grep "Overall_LeakSize" | awk '{print $2}'`
-      FPS=`cat ${MemAnalyseLog} | grep "FPS" | awk '{print $2}'`
+      FPS=`cat ${EncoderLog} | grep "FPS" | awk '{print $2}'`
 
       ReportInfo="${YUVName}, ${SlcMd[$i]}, ${SlcMum[$i]}, ${PicW}, ${PicH}, ${iThrdNum}"
       ReportInfo="${ReportInfo}, ${OverallAllocateSize}, ${OverallFreeSize}, ${OverallLeakSize}, ${FPS}"
