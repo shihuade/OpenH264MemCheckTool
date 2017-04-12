@@ -92,7 +92,7 @@ run_AnalyseMemForAllParamSet()
       TestAnalyseResult="${TestSpace}/MemAnalyseResut_${YUVName}_${SlcMd[$i]}_${SlcMum[$i]}_${iThrdNum}.txt"
       [ -e ${MemLogFile} ] && rm ${MemLogFile}
 
-      EncCommand="./$Encoder  welsenc.cfg  -frms 64 -org ${YUVFile} -thread ${iThrdNum}"
+      EncCommand="./$Encoder  welsenc.cfg  -frms 1000 -org ${YUVFile} -thread ${iThrdNum}"
       EncCommand=" ${EncCommand} -slcmd 0 ${SlcMd[$i]}  -slcnum 0 ${SlcMum[$i]} -dw 0 ${PicW} -dh 0  ${PicH}"
 
       echo ""
