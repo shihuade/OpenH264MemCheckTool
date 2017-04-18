@@ -43,17 +43,19 @@ runInit()
 
   #Test report file
   TestReport="${TestSpace}/MemReport_For_${YUVName}.csv"
-  echo "${YUVName}, SlcMd, SlcNum, PicW, PicH, ThrdNum, AllocSize, FreeSize, LeakSize, FPS">${TestReport}
+  echo "${YUVName}, SliceMode, SlcNum, PicW, PicH, ThrdNum, AllocSize, FreeSize, LeakSize, FPS">${TestReport}
 
 }
 
 
 runInitTestParam()
 {
-   SlcMd=(0  1  2 3)
-   SlcMum=(1 4  4 0 )
+   SliceMode=(0  1  2 3)
+   SliceNum=(1 4  4 0 )
    ThreadNum=(1 2 3 4)
-   ParamNum=${#SlcMd[@]}
+   ParamNum=${#SliceMode[@]}
+
+   SliceSize=(1000 800 600)
 }
 
 runOutputTestInfo()
@@ -68,10 +70,51 @@ runOutputTestInfo()
   echo "***********************************************"
   echo "         test param for YUV                    "
   echo "***********************************************"
-  echo "SlcMd:    ${SlcMd[@]}"
+  echo "SliceMode:    ${SliceMode[@]}"
   echo "***********************************************"
 }
 
+runAnalyseMemForOneParam()
+{
+    TestMemLogFile="${TestSpace}/enc_mem_check_point_${YUVName}_${SliceMode[$i]}_${SliceNum[$i]}_${iThrdNum}.txt"
+    TestAnalyseResult="${TestSpace}/MemAnalyseResut_${YUVName}_${SliceMode[$i]}_${SliceNum[$i]}_${iThrdNum}.txt"
+    [ -e ${MemLogFile} ] && rm ${MemLogFile}
+
+    EncCommand="./$Encoder  welsenc.cfg  -frms 1000 -org ${YUVFile} -dw 0 ${PicW} -dh 0  ${PicH} -threadIdc ${iThrdNum}"
+    EncCommand="${EncCommand} -SliceMode 0 ${SliceMode[$i]}  -slcnum 0 ${SliceNum[$i]} -SliceSize 0 ${iSlcSize}"
+
+    echo ""
+    echo "***********************************************"
+    echo "TestMemLogFile    is: ${TestMemLogFile}"
+    echo "TestAnalyseResult is: ${TestAnalyseResult}"
+    echo "EncCommand is:"
+    echo "${EncCommand}"
+    echo "***********************************************"
+    echo ""
+    ${EncCommand} >${EncoderLog}
+
+    mv ${MemLogFile} ${TestMemLogFile}
+
+    #memory analyse for one encoding param
+    ./run_ParseMemCheckLog.sh ${TestMemLogFile} ${TestAnalyseResult} ${MemAnalyseOption} >${MemAnalyseLog}
+
+    #parse analyse result
+    OverallAllocateSize=`cat ${MemAnalyseLog} | grep "Overall_AllocateSize" | awk '{print $2}'`
+    OverallFreeSize=`cat ${MemAnalyseLog} | grep "Overall_FreeSize" | awk '{print $2}'`
+    OverallLeakSize=`cat ${MemAnalyseLog} | grep "Overall_LeakSize" | awk '{print $2}'`
+    FPS=`cat ${EncoderLog} | grep "FPS" | awk '{print $2}'`
+
+    ReportInfo="${YUVName}, ${SliceMode[$i]}, ${SliceNum[$i]}, ${PicW}, ${PicH}, ${iThrdNum}"
+    ReportInfo="${ReportInfo}, ${OverallAllocateSize}, ${OverallFreeSize}, ${OverallLeakSize}, ${FPS}"
+
+    echo " Overall_AllocateSize  $OverallAllocateSize"
+    echo " Overall_FreeSize      $OverallFreeSize"
+    echo " Overall_LeakSize      $OverallLeakSize"
+    echo " FPS                   $FPS"
+    echo " ReportInfo is: "
+    echo " ${ReportInfo}  "
+    echo " ${ReportInfo}  " >>${TestReport}
+}
 
 run_AnalyseMemForAllParamSet()
 {
@@ -88,46 +131,11 @@ run_AnalyseMemForAllParamSet()
   do
     for iThrdNum in ${ThreadNum[@]}
     do
-      TestMemLogFile="${TestSpace}/enc_mem_check_point_${YUVName}_${SlcMd[$i]}_${SlcMum[$i]}_${iThrdNum}.txt"
-      TestAnalyseResult="${TestSpace}/MemAnalyseResut_${YUVName}_${SlcMd[$i]}_${SlcMum[$i]}_${iThrdNum}.txt"
-      [ -e ${MemLogFile} ] && rm ${MemLogFile}
+      for iSlcSize in ${SliceSize[@]}
+      do
+        runAnalyseMemForOneParam
 
-      EncCommand="./$Encoder  welsenc.cfg  -frms 1000 -org ${YUVFile} -threadIdc ${iThrdNum}"
-      EncCommand=" ${EncCommand} -slcmd 0 ${SlcMd[$i]}  -slcnum 0 ${SlcMum[$i]} -dw 0 ${PicW} -dh 0  ${PicH}"
-
-      echo ""
-      echo "***********************************************"
-      echo "TestMemLogFile    is: ${TestMemLogFile}"
-      echo "TestAnalyseResult is: ${TestAnalyseResult}"
-      echo "EncCommand is:"
-      echo "${EncCommand}"
-      echo "***********************************************"
-      echo ""
-      ${EncCommand} >${EncoderLog}
-
-      mv ${MemLogFile} ${TestMemLogFile}
-
-      #memory analyse for one encoding param
-      ./run_ParseMemCheckLog.sh ${TestMemLogFile} ${TestAnalyseResult} ${MemAnalyseOption} >${MemAnalyseLog}
-
-      #parse analyse result
-      OverallAllocateSize=`cat ${MemAnalyseLog} | grep "Overall_AllocateSize" | awk '{print $2}'`
-      OverallFreeSize=`cat ${MemAnalyseLog} | grep "Overall_FreeSize" | awk '{print $2}'`
-      OverallLeakSize=`cat ${MemAnalyseLog} | grep "Overall_LeakSize" | awk '{print $2}'`
-      FPS=`cat ${EncoderLog} | grep "FPS" | awk '{print $2}'`
-
-      ReportInfo="${YUVName}, ${SlcMd[$i]}, ${SlcMum[$i]}, ${PicW}, ${PicH}, ${iThrdNum}"
-      ReportInfo="${ReportInfo}, ${OverallAllocateSize}, ${OverallFreeSize}, ${OverallLeakSize}, ${FPS}"
-
-      echo " Overall_AllocateSize  $OverallAllocateSize"
-      echo " Overall_FreeSize      $OverallFreeSize"
-      echo " Overall_LeakSize      $OverallLeakSize"
-      echo " FPS                   $FPS"
-
-      echo "ReportInfo is: "
-      echo "${ReportInfo}"
-      echo "${ReportInfo}" >>${TestReport}
-
+      done
     done
   done
 
