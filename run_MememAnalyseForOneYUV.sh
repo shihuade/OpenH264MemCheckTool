@@ -81,7 +81,7 @@ runAnalyseMemForOneParam()
     [ -e ${MemLogFile} ] && rm ${MemLogFile}
 
     EncCommand="./$Encoder  welsenc.cfg  -frms 1000 -org ${YUVFile} -dw 0 ${PicW} -dh 0  ${PicH} -threadIdc ${iThrdNum}"
-    EncCommand="${EncCommand} -SliceMode 0 ${SliceMode[$i]}  -slcnum 0 ${SliceNum[$i]} -SliceSize 0 ${iSlcSize}"
+    EncCommand="${EncCommand} -slcmd 0 ${SliceMode[$i]}  -slcnum 0 ${SliceNum[$i]} -slcsize 0 ${iSlcSize}"
 
     echo ""
     echo "***********************************************"
