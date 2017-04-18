@@ -43,7 +43,7 @@ runInit()
 
   #Test report file
   TestReport="${TestSpace}/MemReport_For_${YUVName}.csv"
-  echo "${YUVName}, SliceMode, SlcNum, PicW, PicH, ThrdNum, AllocSize, FreeSize, LeakSize, FPS">${TestReport}
+  echo "${YUVName}, SliceMode, SlcNum, PicW, PicH, ThrdNum, SliceSize, AllocSize, FreeSize, LeakSize, FPS">${TestReport}
 
 }
 
@@ -55,7 +55,7 @@ runInitTestParam()
    ThreadNum=(1 2 3 4)
    ParamNum=${#SliceMode[@]}
 
-   SliceSize=(1500 800 600)
+   SliceSize=(1500 800)
 }
 
 runOutputTestInfo()
@@ -104,7 +104,7 @@ runAnalyseMemForOneParam()
     OverallLeakSize=`cat ${MemAnalyseLog} | grep "Overall_LeakSize" | awk '{print $2}'`
     FPS=`cat ${EncoderLog} | grep "FPS" | awk '{print $2}'`
 
-    ReportInfo="${YUVName}, ${SliceMode[$i]}, ${SliceNum[$i]}, ${PicW}, ${PicH}, ${iThrdNum}"
+    ReportInfo="${YUVName}, ${SliceMode[$i]}, ${SliceNum[$i]}, ${PicW}, ${PicH}, ${iThrdNum}, ${iSlcSize}"
     ReportInfo="${ReportInfo}, ${OverallAllocateSize}, ${OverallFreeSize}, ${OverallLeakSize}, ${FPS}"
 
     echo " Overall_AllocateSize  $OverallAllocateSize"
