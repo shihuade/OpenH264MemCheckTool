@@ -8,7 +8,7 @@ Build cfg:
   —-h264enc:    make ARCH=x86_64 BUILDTYPE=Release
                 make ARCH=i386   BUILDTYPE=Release
 
-   step: 1/3:  iIncreaseSlicNum  = (iIncreaseSlicNum < iMaxSliceNumOld / 3) ? (iMaxSliceNumOld / 3) : iIncreaseSlicNum;
+   step: 1/4:  iIncreaseSlicNum  = (iIncreaseSlicNum < iMaxSliceNumOld / 4) ? (iMaxSliceNumOld / 4) : iIncreaseSlicNum;
 #======================================================
 Platform:
 Module:    MacBook Pro (Retina, 15-inch, Late 2013)
