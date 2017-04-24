@@ -46,6 +46,7 @@ runOutputInit()
 runTestAllYUVforAllCodec()
 {
   TestDate=`date`
+  let "TestIdx = 0"
   for Codec in  ${TestCodecList[@]}
   do
     for Arch in ${TestCodecArchList[@]}
@@ -67,17 +68,24 @@ runTestAllYUVforAllCodec()
 
       for TestYUV in ${TestYUVList[@]}
       do
+        TestCommand="./run_MememAnalyseForOneYUV.sh ${TestYUV} ${TestYUVPath}"
         echo ""
         echo "*************************************************"
         echo "test YUV is ${TestYUV}"
+        echo "TestCommand is ${TestCommand}"
         echo "*************************************************"
         echo ""
 
-        ./run_MememAnalyseForOneYUV.sh ${TestYUV} ${TestYUVPath}
+        git status
+        pwd
+        [ ! -e h264enc ] && echo "h264enc not found!" && exit 1
+        ${TestCommand}
+        let "TestIdx += 1"
 
         echo ""
         echo "*************************************************"
         echo "end test for ${TestDataFolder}  ${TestYUV}"
+        echo " TestIdx is ${TestIdx}"
         echo "*************************************************"
         echo ""
       done
