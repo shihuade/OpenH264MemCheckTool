@@ -55,7 +55,7 @@ runInitTestParam()
    ThreadNum=(1 2 3 4)
    ParamNum=${#SliceMode[@]}
 
-   SliceSize=(1500 800)
+   SliceSize=(1500 600)
 }
 
 runOutputTestInfo()
