@@ -1,0 +1,16 @@
+#======================================================
+Repos:    git@github.com:shihuade/openh264.git
+Branch:   MultiThread_V11.2_BufferStep_Test
+CommitID: fead4af938e9e2f5f281aff7657f9f5db14f754f
+#======================================================
+Build cfg:
+  ——enable macro: #define MEMORY_CHECK 1
+  —-h264enc:    make ARCH=x86_64 BUILDTYPE=Release
+                make ARCH=i386   BUILDTYPE=Release
+#======================================================
+Platform:
+Module:    MacBook Pro (Retina, 15-inch, Late 2013)
+Processor: 2.3 GHz Intel Core i7
+Memory:    16 GB 1600 MHz DDR3
+Graphics:  Intel Iris Pro 1536 MB
+#======================================================
