@@ -6,7 +6,7 @@ runUsage()
 {
   echo "***********************************************"
   echo "usage:  "
-  echo "  $0  \$YUVName \$YUVDir"
+  echo "  $0  \$YUVName \$YUVDir \$TestSpace"
   echo "***********************************************"
 }
 
@@ -34,7 +34,6 @@ runInit()
   MemLogFile="enc_mem_check_point.txt"
 
   #Test Space
-  TestSpace="TestData"
   [ ! -d ${TestSpace} ] && mkdir ${TestSpace}
   #rm -f ${TestSpace}/*
 
@@ -165,7 +164,7 @@ runMain()
 
 #*********************************************
 #*********************************************
-if [ ! $# -eq 2 ]
+if [ ! $# -eq 3 ]
 then
   runUsage
   exit 1
@@ -173,6 +172,7 @@ fi
 
 YUVName=$1
 YUVDir=$2
+TestSpace=$3
 
 runMain
 

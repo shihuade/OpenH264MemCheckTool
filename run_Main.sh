@@ -51,11 +51,12 @@ runTestAllYUVforAllCodec()
   do
     for Arch in ${TestCodecArchList[@]}
     do
-
       #prepare test codec and clean previous test data
       git clean -fdx
       CodecBinFile="${Codec}/${Arch}/h264enc"
-      TestDataFolder="TestData_${Codec}_${Arch}"
+      TestDataFolder="TestData/${Codec}/${Arch}"
+      [ -d ${TestDataFolder} ] && rm -rf ${TestDataFolder}
+      mkdir ${TestDataFolder}
       cp ${CodecBinFile}  ./
 
       echo "*************************************************"
@@ -68,7 +69,7 @@ runTestAllYUVforAllCodec()
 
       for TestYUV in ${TestYUVList[@]}
       do
-        TestCommand="./run_MememAnalyseForOneYUV.sh ${TestYUV} ${TestYUVPath}"
+        TestCommand="./run_MememAnalyseForOneYUV.sh ${TestYUV} ${TestYUVPath} ${TestDataFolder}"
         echo ""
         echo "*************************************************"
         echo "test YUV is ${TestYUV}"
@@ -90,16 +91,11 @@ runTestAllYUVforAllCodec()
         echo ""
       done
 
-      #rename test data and commit to git repos for special codec/arch
-      [ -d ${TestDataFolder} ] && rm -rf ${TestDataFolder}
-      mv TestData ${TestDataFolder}
+      #add change test data and stage to git repos
       git add ${TestDataFolder}/*
-      git commit -m "update test data for ${TestDataFolder}, date::${TestDate}"
 
     done
-
   done
-
 }
 
 
