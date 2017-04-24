@@ -7,6 +7,8 @@ Build cfg:
   ——enable macro: #define MEMORY_CHECK 1
   —-h264enc:    make ARCH=x86_64 BUILDTYPE=Release
                 make ARCH=i386   BUILDTYPE=Release
+
+   step: 1/3:  iIncreaseSlicNum  = (iIncreaseSlicNum < iMaxSliceNumOld / 3) ? (iMaxSliceNumOld / 3) : iIncreaseSlicNum;
 #======================================================
 Platform:
 Module:    MacBook Pro (Retina, 15-inch, Late 2013)
