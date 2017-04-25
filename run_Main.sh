@@ -93,7 +93,6 @@ runTestAllYUVforAllCodec()
 
       #add change test data and stage to git repos
       git add ${TestDataFolder}/*
-
     done
   done
 }
