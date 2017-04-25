@@ -84,7 +84,7 @@ runAnalyseMemForOneParam()
     TestAnalyseResult="${TestSpace}/MemAnalyseResut_${YUVName}_${SliceMode[$i]}_${SliceNum[$i]}_${iThrdNum}_${iSlcSize}.txt"
     [ -e ${MemLogFile} ] && rm ${MemLogFile}
 
-    EncCommand="./$Encoder  welsenc.cfg  -frms 1 -org ${YUVFile} -dw 0 ${PicW} -dh 0  ${PicH} -threadIdc ${iThrdNum}"
+    EncCommand="./$Encoder  welsenc.cfg  -frms 1000 -org ${YUVFile} -dw 0 ${PicW} -dh 0  ${PicH} -threadIdc ${iThrdNum}"
     EncCommand="${EncCommand} -slcmd 0 ${SliceMode[$i]}  -slcnum 0 ${SliceNum[$i]} -slcsize 0 ${iSlcSize}"
     MemParseCommand="./run_ParseMemCheckLog.sh ${TestMemLogFile} ${TestAnalyseResult} ${MemAnalyseOption}"
 
