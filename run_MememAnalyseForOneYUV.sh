@@ -42,7 +42,12 @@ runInit()
 
   #Test report file
   TestReport="${TestSpace}/MemReport_For_${YUVName}.csv"
-  echo "${YUVName}, SliceMode, SlcNum, PicW, PicH, ThrdNum, SliceSize, AllocSize, FreeSize, LeakSize, FPS">${TestReport}
+  TestReportForAllYUV="${TestSpace}/MemReport_For_AllYUVs.csv"
+  HeadLine="${YUVName}, SliceMode, SlcNum, PicW, PicH, ThrdNum, SliceSize, AllocSize, FPS"
+
+  #for first yuv in test process, generate headline for all yuv report .csv file
+  [ ! -e ${TestReportForAllYUV} ] && echo "${HeadLine}">${TestReportForAllYUV}
+  echo "${HeadLine}">${TestReport}
 
 }
 
@@ -104,7 +109,7 @@ runAnalyseMemForOneParam()
     FPS=`cat ${EncoderLog} | grep "FPS" | awk '{print $2}'`
 
     ReportInfo="${YUVName}, ${SliceMode[$i]}, ${SliceNum[$i]}, ${PicW}, ${PicH}, ${iThrdNum}, ${iSlcSize}"
-    ReportInfo="${ReportInfo}, ${OverallAllocateSize}, ${OverallFreeSize}, ${OverallLeakSize}, ${FPS}"
+    ReportInfo="${ReportInfo}, ${OverallAllocateSize}, ${FPS}"
 
     echo " Overall_AllocateSize  $OverallAllocateSize"
     echo " Overall_FreeSize      $OverallFreeSize"
@@ -113,6 +118,7 @@ runAnalyseMemForOneParam()
     echo " ReportInfo is: "
     echo " ${ReportInfo}  "
     echo " ${ReportInfo}  " >>${TestReport}
+    echo " ${ReportInfo}  " >>${TestReportForAllYUV}
 }
 
 run_AnalyseMemForAllParamSet()
@@ -158,7 +164,6 @@ runMain()
   runOutputTestInfo
 
   run_AnalyseMemForAllParamSet
-
 }
 
 
