@@ -22,7 +22,7 @@ runInit()
                  "Codec_NewDesign_Step_1-4" \
                  "Codec_OriginDesign")
 
-  TestCodecArchList=("x86" "x64")
+  TestCodecArchList=("x64" "x86")
 
   [ -d ${TestYUVPath} ] && cd ${TestYUVPath} && TestYUVPath=`pwd` && cd -
 }
@@ -52,7 +52,7 @@ runTestAllYUVforAllCodec()
     for Arch in ${TestCodecArchList[@]}
     do
       #prepare test codec and clean previous test data
-      git clean -fdx
+      rm -f h264enc
       CodecBinFile="${Codec}/${Arch}/h264enc"
       TestDataFolder="TestData/${Codec}/${Arch}"
       [ -d ${TestDataFolder} ] && rm -rf ${TestDataFolder}
@@ -90,9 +90,6 @@ runTestAllYUVforAllCodec()
         echo "*************************************************"
         echo ""
       done
-
-      #add change test data and stage to git repos
-      git add ${TestDataFolder}/*
     done
   done
 }

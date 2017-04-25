@@ -34,16 +34,15 @@ runInit()
   MemLogFile="enc_mem_check_point.txt"
 
   #Test Space
-  [ ! -d ${TestSpace} ] && mkdir ${TestSpace}
-  #rm -f ${TestSpace}/*
-
+  [ ! -d ${TestSpace} ] && mkdir -p ${TestSpace}
+  [ ! -d ${TestSpace} ] && echo "can not create test space for test data" && exit 1
   #Memory analyse option
   MemAnalyseOption="OverallCheck"
 
   #Test report file
   TestReport="${TestSpace}/MemReport_For_${YUVName}.csv"
   TestReportForAllYUV="${TestSpace}/MemReport_For_AllYUVs.csv"
-  HeadLine="${YUVName}, SliceMode, SlcNum, PicW, PicH, ThrdNum, SliceSize, AllocSize, FPS"
+  HeadLine="TestYUV, SliceMode, SlcNum, PicW, PicH, ThrdNum, SliceSize, AllocSize, FPS"
 
   #for first yuv in test process, generate headline for all yuv report .csv file
   [ ! -e ${TestReportForAllYUV} ] && echo "${HeadLine}">${TestReportForAllYUV}
@@ -54,12 +53,13 @@ runInit()
 
 runInitTestParam()
 {
-   SliceMode=(0  1  2 3)
-   SliceNum=(1 4  4 0 )
-   ThreadNum=(1 2 3 4)
-   ParamNum=${#SliceMode[@]}
+  SliceMode=(0  1  2 3)
+  SliceNum=(1 4  4 0 )
+  ThreadNum=(1 2 3 4)
 
-   SliceSize=(1500 600)
+  ParamNum=${#SliceMode[@]}
+
+  SliceSize=(1500 600)
 }
 
 runOutputTestInfo()
@@ -84,8 +84,9 @@ runAnalyseMemForOneParam()
     TestAnalyseResult="${TestSpace}/MemAnalyseResut_${YUVName}_${SliceMode[$i]}_${SliceNum[$i]}_${iThrdNum}_${iSlcSize}.txt"
     [ -e ${MemLogFile} ] && rm ${MemLogFile}
 
-    EncCommand="./$Encoder  welsenc.cfg  -frms 1000 -org ${YUVFile} -dw 0 ${PicW} -dh 0  ${PicH} -threadIdc ${iThrdNum}"
+    EncCommand="./$Encoder  welsenc.cfg  -frms 1 -org ${YUVFile} -dw 0 ${PicW} -dh 0  ${PicH} -threadIdc ${iThrdNum}"
     EncCommand="${EncCommand} -slcmd 0 ${SliceMode[$i]}  -slcnum 0 ${SliceNum[$i]} -slcsize 0 ${iSlcSize}"
+    MemParseCommand="./run_ParseMemCheckLog.sh ${TestMemLogFile} ${TestAnalyseResult} ${MemAnalyseOption}"
 
     echo ""
     echo "***********************************************"
@@ -93,6 +94,8 @@ runAnalyseMemForOneParam()
     echo "TestAnalyseResult is: ${TestAnalyseResult}"
     echo "EncCommand is:"
     echo "${EncCommand}"
+    echo "MemParseCommand is:"
+    echo "${MemParseCommand}"
     echo "***********************************************"
     echo ""
     ${EncCommand} >${EncoderLog}
@@ -100,7 +103,7 @@ runAnalyseMemForOneParam()
     mv ${MemLogFile} ${TestMemLogFile}
 
     #memory analyse for one encoding param
-    ./run_ParseMemCheckLog.sh ${TestMemLogFile} ${TestAnalyseResult} ${MemAnalyseOption} >${MemAnalyseLog}
+    ${MemParseCommand} >${MemAnalyseLog}
 
     #parse analyse result
     OverallAllocateSize=`cat ${MemAnalyseLog} | grep "Overall_AllocateSize" | awk '{print $2}'`
