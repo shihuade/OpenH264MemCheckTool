@@ -1,13 +1,18 @@
 #!/bin/bash
 
+#*****************************************************************************
+#  brief:  Analyse memroy allocate statistic info for all YUVs with
+#              all test cases
+#
+#  usage:   ./run_Main.sh \$TestYUVListDir
+#            ----TestYUVListDir: Test YUV's folder, script will search YUV in this folder
+#
+#*****************************************************************************
 
 runUsage()
 {
   echo " Usage: $0  \$TestYUVListDir"
-
 }
-
-
 
 runInit()
 {

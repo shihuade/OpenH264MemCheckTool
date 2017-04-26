@@ -1,6 +1,14 @@
 #!/bin/bash
-
-
+#*****************************************************************************
+#  brief:  Analyse memroy allocate statistic info for one YUV with
+#              all test cases
+#
+#  usage:   ./run_MememAnalyseForOneYUV.sh \$YUVName \$YUVDir \$TestSpace
+#            ----YUVName:  Test YUV
+#            ----YUVDir:   Test YUV's folder, script will search YUV in this folder
+#            ----TestSpace:Test data output folder
+#
+#*****************************************************************************
 
 runUsage()
 {
