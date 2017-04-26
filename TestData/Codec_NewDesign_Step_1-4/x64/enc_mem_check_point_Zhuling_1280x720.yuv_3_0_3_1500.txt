@@ -1,0 +1,812 @@
+WelsMalloc(), 0xc1000000 : actual uiSize:	1307	bytes, input uiSize: 1232 bytes, 0 - SWelsSvcCodingParam
+WelsMalloc(), 0xc1031800 : actual uiSize:	1355	bytes, input uiSize: 1280 bytes, 1 - SWelsFuncPtrList
+WelsMalloc(), 0xc0c029d0 : actual uiSize:	171	bytes, input uiSize: 96 bytes, 2 - SWelsEncoderOutput
+WelsMalloc(), 0x1726000 : actual uiSize:	1383467	bytes, input uiSize: 1383392 bytes, 3 - pOut->pBsBuffer
+WelsMalloc(), 0xc1800000 : actual uiSize:	3195	bytes, input uiSize: 3120 bytes, 4 - pOut->sNalList
+WelsMalloc(), 0xc0d00000 : actual uiSize:	387	bytes, input uiSize: 312 bytes, 5 - pOut->pNalLen
+WelsMalloc(), 0x1879000 : actual uiSize:	1383467	bytes, input uiSize: 1383392 bytes, 6 - pFrameBs
+WelsMalloc(), 0xc1800e00 : actual uiSize:	1331	bytes, input uiSize: 1256 bytes, 7 - SSliceThreading
+WelsMalloc(), 0xc0d00190 : actual uiSize:	147	bytes, input uiSize: 72 bytes, 8 - pThreadPEncCtx
+WelsMalloc(), 0x19cb000 : actual uiSize:	1383467	bytes, input uiSize: 1383392 bytes, 9 - pSmt->pThreadBsBuffer
+WelsMalloc(), 0x1b1d000 : actual uiSize:	1383467	bytes, input uiSize: 1383392 bytes, 10 - pSmt->pThreadBsBuffer
+WelsMalloc(), 0x1c6f000 : actual uiSize:	1383467	bytes, input uiSize: 1383392 bytes, 11 - pSmt->pThreadBsBuffer
+WelsMalloc(), 0xc1033600 : actual uiSize:	28875	bytes, input uiSize: 28800 bytes, 12 - pIntra4x4PredModeBlocks
+WelsMalloc(), 0xc103a800 : actual uiSize:	86475	bytes, input uiSize: 86400 bytes, 13 - pNonZeroCountBlocks
+WelsMalloc(), 0x1dc1000 : actual uiSize:	460875	bytes, input uiSize: 460800 bytes, 14 - pMvUnitBlock4x4
+WelsMalloc(), 0xc104fa00 : actual uiSize:	28875	bytes, input uiSize: 28800 bytes, 15 - pRefIndexBlock4x4
+WelsMalloc(), 0xc1056c00 : actual uiSize:	14475	bytes, input uiSize: 14400 bytes, 16 - pSadCostMb
+WelsMalloc(), 0xc0c02e30 : actual uiSize:	135	bytes, input uiSize: 60 bytes, 17 - SLTRState
+WelsMalloc(), 0xc0c02ec0 : actual uiSize:	235	bytes, input uiSize: 160 bytes, 18 - SStrideTables
+WelsMalloc(), 0xc105a600 : actual uiSize:	14763	bytes, input uiSize: 14688 bytes, 19 - pBase
+WelsMalloc(), 0xc0c02fb0 : actual uiSize:	235	bytes, input uiSize: 160 bytes, 20 - pTmpRow
+WelsFree(), 0xc0c02fb0 - pTmpRow: 	235	 bytes 
+WelsMalloc(), 0xc0c030a0 : actual uiSize:	435	bytes, input uiSize: 360 bytes, 21 - pWelsSvcRc
+WelsMalloc(), 0xc0c03260 : actual uiSize:	339	bytes, input uiSize: 264 bytes, 22 - pVaa
+WelsMalloc(), 0xc105e000 : actual uiSize:	3675	bytes, input uiSize: 3600 bytes, 23 - pVaa->pVaaBackgroundMbFlag
+WelsMalloc(), 0xc105f000 : actual uiSize:	57675	bytes, input uiSize: 57600 bytes, 24 - pVaa->sVaaCalcInfo.sad8x8
+WelsMalloc(), 0xc106d200 : actual uiSize:	14475	bytes, input uiSize: 14400 bytes, 25 - pVaa->sVaaCalcInfo.pSsd16x16
+WelsMalloc(), 0xc1070c00 : actual uiSize:	14475	bytes, input uiSize: 14400 bytes, 26 - pVaa->sVaaCalcInfo.pSum16x16
+WelsMalloc(), 0xc1074600 : actual uiSize:	14475	bytes, input uiSize: 14400 bytes, 27 - pVaa->sVaaCalcInfo.pSumOfSquare16x16
+WelsMalloc(), 0xc1078000 : actual uiSize:	57675	bytes, input uiSize: 57600 bytes, 28 - pVaa->sVaaCalcInfo.pSumOfDiff8x8
+WelsMalloc(), 0xc1086200 : actual uiSize:	14475	bytes, input uiSize: 14400 bytes, 29 - pVaa->sVaaCalcInfo.pMad8x8
+WelsMalloc(), 0xc0c033c0 : actual uiSize:	83	bytes, input uiSize: 8 bytes, 30 - ppRefPicListExt
+WelsMalloc(), 0xc0c03420 : actual uiSize:	83	bytes, input uiSize: 8 bytes, 31 - ppDqLayerList
+WelsMalloc(), 0xc0c03480 : actual uiSize:	403	bytes, input uiSize: 328 bytes, 32 - pRefList
+WelsMalloc(), 0xc0c03620 : actual uiSize:	211	bytes, input uiSize: 136 bytes, 33 - pPic
+WelsMalloc(), 0x1e32000 : actual uiSize:	1580619	bytes, input uiSize: 1580544 bytes, 34 - pPic->pBuffer
+WelsMalloc(), 0xc1089c00 : actual uiSize:	14475	bytes, input uiSize: 14400 bytes, 35 - pPic->uiRefMbType
+WelsMalloc(), 0xc108d600 : actual uiSize:	3675	bytes, input uiSize: 3600 bytes, 36 - pPic->pRefMbQp
+WelsMalloc(), 0xc108e600 : actual uiSize:	14475	bytes, input uiSize: 14400 bytes, 37 - pPic->sMvList
+WelsMalloc(), 0xc1092000 : actual uiSize:	14475	bytes, input uiSize: 14400 bytes, 38 - pPic->pMbSkipSad
+WelsMalloc(), 0xc0c03700 : actual uiSize:	211	bytes, input uiSize: 136 bytes, 39 - pPic
+WelsMalloc(), 0x1fb4000 : actual uiSize:	1580619	bytes, input uiSize: 1580544 bytes, 40 - pPic->pBuffer
+WelsMalloc(), 0xc1095a00 : actual uiSize:	14475	bytes, input uiSize: 14400 bytes, 41 - pPic->uiRefMbType
+WelsMalloc(), 0xc1099400 : actual uiSize:	3675	bytes, input uiSize: 3600 bytes, 42 - pPic->pRefMbQp
+WelsMalloc(), 0xc109a400 : actual uiSize:	14475	bytes, input uiSize: 14400 bytes, 43 - pPic->sMvList
+WelsMalloc(), 0xc109de00 : actual uiSize:	14475	bytes, input uiSize: 14400 bytes, 44 - pPic->pMbSkipSad
+WelsMalloc(), 0xc0c037e0 : actual uiSize:	211	bytes, input uiSize: 136 bytes, 45 - pPic
+WelsMalloc(), 0x2136000 : actual uiSize:	1580619	bytes, input uiSize: 1580544 bytes, 46 - pPic->pBuffer
+WelsMalloc(), 0xc10a1800 : actual uiSize:	14475	bytes, input uiSize: 14400 bytes, 47 - pPic->uiRefMbType
+WelsMalloc(), 0xc10a5200 : actual uiSize:	3675	bytes, input uiSize: 3600 bytes, 48 - pPic->pRefMbQp
+WelsMalloc(), 0xc10a6200 : actual uiSize:	14475	bytes, input uiSize: 14400 bytes, 49 - pPic->sMvList
+WelsMalloc(), 0xc10a9c00 : actual uiSize:	14475	bytes, input uiSize: 14400 bytes, 50 - pPic->pMbSkipSad
+WelsMalloc(), 0xc0c038c0 : actual uiSize:	211	bytes, input uiSize: 136 bytes, 51 - pPic
+WelsMalloc(), 0x22b8000 : actual uiSize:	1580619	bytes, input uiSize: 1580544 bytes, 52 - pPic->pBuffer
+WelsMalloc(), 0xc10ad600 : actual uiSize:	14475	bytes, input uiSize: 14400 bytes, 53 - pPic->uiRefMbType
+WelsMalloc(), 0xc10b1000 : actual uiSize:	3675	bytes, input uiSize: 3600 bytes, 54 - pPic->pRefMbQp
+WelsMalloc(), 0xc10b2000 : actual uiSize:	14475	bytes, input uiSize: 14400 bytes, 55 - pPic->sMvList
+WelsMalloc(), 0xc10b5a00 : actual uiSize:	14475	bytes, input uiSize: 14400 bytes, 56 - pPic->pMbSkipSad
+WelsMalloc(), 0xc0c039a0 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 57 - pDqLayer
+WelsMalloc(), 0xc10b9400 : actual uiSize:	19083	bytes, input uiSize: 19008 bytes, 58 - pSliceBuffer
+WelsMalloc(), 0xc10be000 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 59 - sSliceBs.pBs
+WelsMalloc(), 0xc0c03bf0 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 60 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c03e40 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 61 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c04190 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 62 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c04360 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 63 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc10d1a00 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 64 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c043d0 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 65 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c04430 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 66 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c04490 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 67 - pMbCache->pDct
+WelsMalloc(), 0xc10d2600 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 68 - sSliceBs.pBs
+WelsMalloc(), 0xc0c04810 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 69 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c04a60 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 70 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c04db0 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 71 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c04f80 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 72 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc10e6000 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 73 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c04ff0 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 74 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c05050 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 75 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c050b0 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 76 - pMbCache->pDct
+WelsMalloc(), 0xc10e6c00 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 77 - sSliceBs.pBs
+WelsMalloc(), 0xc0c05430 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 78 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c05680 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 79 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c059d0 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 80 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c05ba0 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 81 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc10fa600 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 82 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c05c10 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 83 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c05c70 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 84 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c05cd0 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 85 - pMbCache->pDct
+WelsMalloc(), 0xc10fb200 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 86 - sSliceBs.pBs
+WelsMalloc(), 0xc0c06050 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 87 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c062a0 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 88 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c065f0 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 89 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c067c0 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 90 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc110ec00 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 91 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c06830 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 92 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c06890 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 93 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c068f0 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 94 - pMbCache->pDct
+WelsMalloc(), 0xc110f800 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 95 - sSliceBs.pBs
+WelsMalloc(), 0xc0c06c70 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 96 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c06ec0 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 97 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c07210 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 98 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c073e0 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 99 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc1123200 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 100 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c07450 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 101 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c074b0 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 102 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c07510 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 103 - pMbCache->pDct
+WelsMalloc(), 0xc1123e00 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 104 - sSliceBs.pBs
+WelsMalloc(), 0xc0c07890 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 105 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c07ae0 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 106 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c07e30 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 107 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c08000 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 108 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc1137800 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 109 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c08070 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 110 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c080d0 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 111 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c08130 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 112 - pMbCache->pDct
+WelsMalloc(), 0xc1138400 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 113 - sSliceBs.pBs
+WelsMalloc(), 0xc0c084b0 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 114 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c08700 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 115 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c08a50 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 116 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c08c20 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 117 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc114be00 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 118 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c08c90 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 119 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c08cf0 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 120 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c08d50 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 121 - pMbCache->pDct
+WelsMalloc(), 0xc114ca00 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 122 - sSliceBs.pBs
+WelsMalloc(), 0xc0c090d0 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 123 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c09320 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 124 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c09670 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 125 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c09840 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 126 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc1160400 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 127 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c098b0 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 128 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c09910 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 129 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c09970 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 130 - pMbCache->pDct
+WelsMalloc(), 0xc1161000 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 131 - sSliceBs.pBs
+WelsMalloc(), 0xc0c09cf0 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 132 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c09f40 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 133 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c0a290 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 134 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c0a460 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 135 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc1174a00 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 136 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c0a4d0 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 137 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c0a530 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 138 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c0a590 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 139 - pMbCache->pDct
+WelsMalloc(), 0xc1175600 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 140 - sSliceBs.pBs
+WelsMalloc(), 0xc0c0a910 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 141 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c0ab60 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 142 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c0aeb0 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 143 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c0b080 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 144 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc1189000 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 145 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c0b0f0 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 146 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c0b150 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 147 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c0b1b0 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 148 - pMbCache->pDct
+WelsMalloc(), 0xc1189c00 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 149 - sSliceBs.pBs
+WelsMalloc(), 0xc0c0b530 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 150 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c0b780 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 151 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c0bad0 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 152 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c0bca0 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 153 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc119d600 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 154 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c0bd10 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 155 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c0bd70 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 156 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c0bdd0 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 157 - pMbCache->pDct
+WelsMalloc(), 0xc119e200 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 158 - sSliceBs.pBs
+WelsMalloc(), 0xc0c0c150 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 159 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c0c3a0 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 160 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c0c6f0 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 161 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c0c8c0 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 162 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc11b1c00 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 163 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c0c930 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 164 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c0c990 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 165 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c0c9f0 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 166 - pMbCache->pDct
+WelsMalloc(), 0xc11b2800 : actual uiSize:	19083	bytes, input uiSize: 19008 bytes, 167 - pSliceBuffer
+WelsMalloc(), 0xc11b7400 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 168 - sSliceBs.pBs
+WelsMalloc(), 0xc0c0cd70 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 169 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c0cfc0 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 170 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c0d310 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 171 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c0d4e0 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 172 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc11cae00 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 173 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c0d550 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 174 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c0d5b0 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 175 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c0d610 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 176 - pMbCache->pDct
+WelsMalloc(), 0xc11cba00 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 177 - sSliceBs.pBs
+WelsMalloc(), 0xc0c0d990 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 178 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c0dbe0 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 179 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c0df30 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 180 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c0e100 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 181 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc11df400 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 182 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c0e170 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 183 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c0e1d0 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 184 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c0e230 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 185 - pMbCache->pDct
+WelsMalloc(), 0xc11e0000 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 186 - sSliceBs.pBs
+WelsMalloc(), 0xc0c0e5b0 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 187 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c0e800 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 188 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c0eb50 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 189 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c0ed20 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 190 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc11f3a00 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 191 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c0ed90 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 192 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c0edf0 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 193 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c0ee50 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 194 - pMbCache->pDct
+WelsMalloc(), 0xc11f4600 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 195 - sSliceBs.pBs
+WelsMalloc(), 0xc0c0f1d0 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 196 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c0f420 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 197 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c0f770 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 198 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c0f940 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 199 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc1208000 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 200 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c0f9b0 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 201 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c0fa10 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 202 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c0fa70 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 203 - pMbCache->pDct
+WelsMalloc(), 0xc1208c00 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 204 - sSliceBs.pBs
+WelsMalloc(), 0xc0c0fdf0 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 205 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c10040 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 206 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c10390 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 207 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c10560 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 208 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc121c600 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 209 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c105d0 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 210 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c10630 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 211 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c10690 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 212 - pMbCache->pDct
+WelsMalloc(), 0xc121d200 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 213 - sSliceBs.pBs
+WelsMalloc(), 0xc0c10a10 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 214 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c10c60 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 215 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c10fb0 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 216 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c11180 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 217 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc1230c00 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 218 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c111f0 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 219 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c11250 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 220 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c112b0 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 221 - pMbCache->pDct
+WelsMalloc(), 0xc1231800 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 222 - sSliceBs.pBs
+WelsMalloc(), 0xc0c11630 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 223 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c11880 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 224 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c11bd0 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 225 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c11da0 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 226 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc1245200 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 227 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c11e10 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 228 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c11e70 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 229 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c11ed0 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 230 - pMbCache->pDct
+WelsMalloc(), 0xc1245e00 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 231 - sSliceBs.pBs
+WelsMalloc(), 0xc0c12250 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 232 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c124a0 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 233 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c127f0 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 234 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c129c0 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 235 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc1259800 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 236 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c12a30 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 237 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c12a90 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 238 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c12af0 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 239 - pMbCache->pDct
+WelsMalloc(), 0xc125a400 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 240 - sSliceBs.pBs
+WelsMalloc(), 0xc0c12e70 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 241 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c130c0 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 242 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c13410 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 243 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c135e0 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 244 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc126de00 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 245 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c13650 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 246 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c136b0 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 247 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c13710 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 248 - pMbCache->pDct
+WelsMalloc(), 0xc126ea00 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 249 - sSliceBs.pBs
+WelsMalloc(), 0xc0c13a90 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 250 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c13ce0 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 251 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c14030 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 252 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c14200 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 253 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc1282400 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 254 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c14270 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 255 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c142d0 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 256 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c14330 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 257 - pMbCache->pDct
+WelsMalloc(), 0xc1283000 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 258 - sSliceBs.pBs
+WelsMalloc(), 0xc0c146b0 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 259 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c14900 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 260 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c14c50 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 261 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c14e20 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 262 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc1296a00 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 263 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c14e90 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 264 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c14ef0 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 265 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c14f50 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 266 - pMbCache->pDct
+WelsMalloc(), 0xc1297600 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 267 - sSliceBs.pBs
+WelsMalloc(), 0xc0c152d0 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 268 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c15520 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 269 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c15870 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 270 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c15a40 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 271 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc12ab000 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 272 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c15ab0 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 273 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c15b10 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 274 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c15b70 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 275 - pMbCache->pDct
+WelsMalloc(), 0xc12abc00 : actual uiSize:	19083	bytes, input uiSize: 19008 bytes, 276 - pSliceBuffer
+WelsMalloc(), 0xc12b0800 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 277 - sSliceBs.pBs
+WelsMalloc(), 0xc0c15ef0 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 278 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c16140 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 279 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c16490 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 280 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c16660 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 281 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc12c4200 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 282 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c166d0 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 283 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c16730 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 284 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c16790 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 285 - pMbCache->pDct
+WelsMalloc(), 0xc12c4e00 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 286 - sSliceBs.pBs
+WelsMalloc(), 0xc0c16b10 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 287 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c16d60 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 288 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c170b0 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 289 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c17280 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 290 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc12d8800 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 291 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c172f0 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 292 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c17350 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 293 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c173b0 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 294 - pMbCache->pDct
+WelsMalloc(), 0xc12d9400 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 295 - sSliceBs.pBs
+WelsMalloc(), 0xc0c17730 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 296 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c17980 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 297 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c17cd0 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 298 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c17ea0 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 299 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc12ece00 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 300 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c17f10 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 301 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c17f70 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 302 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c17fd0 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 303 - pMbCache->pDct
+WelsMalloc(), 0xc12eda00 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 304 - sSliceBs.pBs
+WelsMalloc(), 0xc0c18350 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 305 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c185a0 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 306 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c188f0 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 307 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c18ac0 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 308 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc1301400 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 309 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c18b30 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 310 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c18b90 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 311 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c18bf0 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 312 - pMbCache->pDct
+WelsMalloc(), 0xc1302000 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 313 - sSliceBs.pBs
+WelsMalloc(), 0xc0c18f70 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 314 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c191c0 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 315 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c19510 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 316 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c196e0 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 317 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc1315a00 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 318 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c19750 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 319 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c197b0 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 320 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c19810 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 321 - pMbCache->pDct
+WelsMalloc(), 0xc1316600 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 322 - sSliceBs.pBs
+WelsMalloc(), 0xc0c19b90 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 323 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c19de0 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 324 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c1a130 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 325 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c1a300 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 326 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc132a000 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 327 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c1a370 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 328 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c1a3d0 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 329 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c1a430 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 330 - pMbCache->pDct
+WelsMalloc(), 0xc132ac00 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 331 - sSliceBs.pBs
+WelsMalloc(), 0xc0c1a7b0 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 332 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c1aa00 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 333 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c1ad50 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 334 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c1af20 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 335 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc133e600 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 336 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c1af90 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 337 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c1aff0 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 338 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c1b050 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 339 - pMbCache->pDct
+WelsMalloc(), 0xc133f200 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 340 - sSliceBs.pBs
+WelsMalloc(), 0xc0c1b3d0 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 341 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c1b620 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 342 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c1b970 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 343 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c1bb40 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 344 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc1352c00 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 345 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c1bbb0 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 346 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c1bc10 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 347 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c1bc70 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 348 - pMbCache->pDct
+WelsMalloc(), 0xc1353800 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 349 - sSliceBs.pBs
+WelsMalloc(), 0xc0c1bff0 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 350 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c1c240 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 351 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c1c590 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 352 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c1c760 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 353 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc1367200 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 354 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c1c7d0 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 355 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c1c830 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 356 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c1c890 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 357 - pMbCache->pDct
+WelsMalloc(), 0xc1367e00 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 358 - sSliceBs.pBs
+WelsMalloc(), 0xc0c1cc10 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 359 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c1ce60 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 360 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c1d1b0 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 361 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c1d380 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 362 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc137b800 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 363 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c1d3f0 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 364 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c1d450 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 365 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c1d4b0 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 366 - pMbCache->pDct
+WelsMalloc(), 0xc137c400 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 367 - sSliceBs.pBs
+WelsMalloc(), 0xc0c1d830 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 368 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c1da80 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 369 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c1ddd0 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 370 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c1dfa0 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 371 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc138fe00 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 372 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c1e010 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 373 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c1e070 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 374 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c1e0d0 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 375 - pMbCache->pDct
+WelsMalloc(), 0xc1390a00 : actual uiSize:	79915	bytes, input uiSize: 79840 bytes, 376 - sSliceBs.pBs
+WelsMalloc(), 0xc0c1e450 : actual uiSize:	587	bytes, input uiSize: 512 bytes, 377 - pMbCache->pMemPredMb
+WelsMalloc(), 0xc0c1e6a0 : actual uiSize:	843	bytes, input uiSize: 768 bytes, 378 - pMbCache->pCoeffLevel
+WelsMalloc(), 0xc0c1e9f0 : actual uiSize:	459	bytes, input uiSize: 384 bytes, 379 - pMbCache->pSkipMb
+WelsMalloc(), 0xc0c1ebc0 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 380 - pMbCache->pMemPredBlk4
+WelsMalloc(), 0xc13a4400 : actual uiSize:	2635	bytes, input uiSize: 2560 bytes, 381 - pMbCache->pBufferInterPredMe
+WelsMalloc(), 0xc0c1ec30 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 382 - pMbCache->pPrevIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c1ec90 : actual uiSize:	91	bytes, input uiSize: 16 bytes, 383 - pMbCache->pRemIntra4x4PredModeFlag
+WelsMalloc(), 0xc0c1ecf0 : actual uiSize:	891	bytes, input uiSize: 816 bytes, 384 - pMbCache->pDct
+WelsMalloc(), 0xc0c1f070 : actual uiSize:	363	bytes, input uiSize: 288 bytes, 385 - ppSliceInLayer
+WelsMalloc(), 0xc0c1f1e0 : actual uiSize:	363	bytes, input uiSize: 288 bytes, 386 - pFirstMbIdxOfSlice
+WelsMalloc(), 0xc0c1f350 : actual uiSize:	363	bytes, input uiSize: 288 bytes, 387 - pCountMbNumInSlice
+WelsMalloc(), 0xc0c1f4c0 : actual uiSize:	127	bytes, input uiSize: 52 bytes, 388 - pSpsArray
+WelsMalloc(), 0xc0c1f540 : actual uiSize:	107	bytes, input uiSize: 32 bytes, 389 - pPPSArray
+WelsMalloc(), 0xc0c1f5b0 : actual uiSize:	79	bytes, input uiSize: 4 bytes, 390 - pDqIdcMap
+WelsMalloc(), 0xc13a5000 : actual uiSize:	7275	bytes, input uiSize: 7200 bytes, 391 - pSliceSeg->pOverallMbMap
+WelsMalloc(), 0xc0c1f600 : actual uiSize:	83	bytes, input uiSize: 8 bytes, 392 - ppMbListD
+WelsMalloc(), 0x243a000 : actual uiSize:	547275	bytes, input uiSize: 547200 bytes, 393 - ppMbListD[0]
+WelsMalloc(), 0xc13a6e00 : actual uiSize:	108339	bytes, input uiSize: 108264 bytes, 394 - pMvdCostTable
+WelsMalloc(), 0xc0c1f660 : actual uiSize:	631	bytes, input uiSize: 556 bytes, 395 - pWelsSvcRc->pTemporalOverRc
+WelsMalloc(), 0xc0c1fba0 : actual uiSize:	211	bytes, input uiSize: 136 bytes, 396 - pPic
+WelsMalloc(), 0x24c0000 : actual uiSize:	1580619	bytes, input uiSize: 1580544 bytes, 397 - pPic->pBuffer
+WelsMalloc(), 0xc0c1fc80 : actual uiSize:	211	bytes, input uiSize: 136 bytes, 398 - pPic
+WelsMalloc(), 0x2642000 : actual uiSize:	1580619	bytes, input uiSize: 1580544 bytes, 399 - pPic->pBuffer
+WelsMalloc(), 0xc0c1fd60 : actual uiSize:	211	bytes, input uiSize: 136 bytes, 400 - pPic
+WelsMalloc(), 0x27c4000 : actual uiSize:	1580619	bytes, input uiSize: 1580544 bytes, 401 - pPic->pBuffer
+WelsMalloc(), 0xc0c1fe40 : actual uiSize:	211	bytes, input uiSize: 136 bytes, 402 - pPic
+WelsMalloc(), 0x2946000 : actual uiSize:	1580619	bytes, input uiSize: 1580544 bytes, 403 - pPic->pBuffer
+WelsMalloc(), 0xc0c1ff20 : actual uiSize:	211	bytes, input uiSize: 136 bytes, 404 - pPic
+WelsMalloc(), 0x2ac8000 : actual uiSize:	1580619	bytes, input uiSize: 1580544 bytes, 405 - pPic->pBuffer
+WelsFree(), 0x2ac8000 - pPic->pBuffer: 	1580619	 bytes 
+WelsFree(), 0xc0c1ff20 - pPic: 	211	 bytes 
+WelsFree(), 0x2946000 - pPic->pBuffer: 	1580619	 bytes 
+WelsFree(), 0xc0c1fe40 - pPic: 	211	 bytes 
+WelsFree(), 0x2642000 - pPic->pBuffer: 	1580619	 bytes 
+WelsFree(), 0xc0c1fc80 - pPic: 	211	 bytes 
+WelsFree(), 0x27c4000 - pPic->pBuffer: 	1580619	 bytes 
+WelsFree(), 0xc0c1fd60 - pPic: 	211	 bytes 
+WelsFree(), 0x24c0000 - pPic->pBuffer: 	1580619	 bytes 
+WelsFree(), 0xc0c1fba0 - pPic: 	211	 bytes 
+WelsFree(), 0xc105a600 - pBase: 	14763	 bytes 
+WelsFree(), 0xc0c02ec0 - SStrideTables: 	235	 bytes 
+WelsFree(), 0xc0c1f5b0 - pDqIdcMap: 	79	 bytes 
+WelsFree(), 0x1726000 - pOut->pBsBuffer: 	1383467	 bytes 
+WelsFree(), 0xc1800000 - pOut->sNalList: 	3195	 bytes 
+WelsFree(), 0xc0d00000 - pOut->pNalLen: 	387	 bytes 
+WelsFree(), 0xc0c029d0 - SWelsEncoderOutput: 	171	 bytes 
+WelsFree(), 0xc0d00190 - pThreadPEncCtx: 	147	 bytes 
+WelsFree(), 0x19cb000 - pSmt->pThreadBsBuffer: 	1383467	 bytes 
+WelsFree(), 0x1b1d000 - pSmt->pThreadBsBuffer: 	1383467	 bytes 
+WelsFree(), 0x1c6f000 - pSmt->pThreadBsBuffer: 	1383467	 bytes 
+WelsFree(), 0xc1800e00 - SSliceThreading: 	1331	 bytes 
+WelsFree(), 0x1879000 - pFrameBs: 	1383467	 bytes 
+WelsFree(), 0xc0c1f4c0 - pSpsArray: 	127	 bytes 
+WelsFree(), 0xc0c1f540 - pPPSArray: 	107	 bytes 
+WelsFree(), 0xc1033600 - pIntra4x4PredModeBlocks: 	28875	 bytes 
+WelsFree(), 0xc103a800 - pNonZeroCountBlocks: 	86475	 bytes 
+WelsFree(), 0x1dc1000 - pMvUnitBlock4x4: 	460875	 bytes 
+WelsFree(), 0xc104fa00 - pRefIndexBlock4x4: 	28875	 bytes 
+WelsFree(), 0x243a000 - ppMbListD[0]: 	547275	 bytes 
+WelsFree(), 0xc0c1f600 - ppMbListD: 	83	 bytes 
+WelsFree(), 0xc1056c00 - pSadCostMb: 	14475	 bytes 
+WelsFree(), 0xc0c02e30 - SLTRState: 	135	 bytes 
+WelsFree(), 0xc0c03e40 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c03bf0 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c04190 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c04360 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc10d1a00 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c043d0 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c04430 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c04490 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc10be000 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c04a60 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c04810 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c04db0 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c04f80 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc10e6000 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c04ff0 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c05050 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c050b0 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc10d2600 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c05680 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c05430 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c059d0 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c05ba0 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc10fa600 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c05c10 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c05c70 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c05cd0 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc10e6c00 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c062a0 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c06050 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c065f0 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c067c0 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc110ec00 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c06830 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c06890 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c068f0 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc10fb200 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c06ec0 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c06c70 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c07210 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c073e0 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc1123200 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c07450 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c074b0 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c07510 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc110f800 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c07ae0 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c07890 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c07e30 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c08000 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc1137800 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c08070 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c080d0 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c08130 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc1123e00 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c08700 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c084b0 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c08a50 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c08c20 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc114be00 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c08c90 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c08cf0 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c08d50 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc1138400 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c09320 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c090d0 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c09670 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c09840 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc1160400 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c098b0 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c09910 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c09970 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc114ca00 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c09f40 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c09cf0 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c0a290 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c0a460 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc1174a00 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c0a4d0 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c0a530 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c0a590 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc1161000 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c0ab60 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c0a910 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c0aeb0 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c0b080 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc1189000 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c0b0f0 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c0b150 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c0b1b0 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc1175600 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c0b780 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c0b530 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c0bad0 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c0bca0 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc119d600 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c0bd10 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c0bd70 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c0bdd0 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc1189c00 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c0c3a0 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c0c150 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c0c6f0 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c0c8c0 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc11b1c00 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c0c930 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c0c990 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c0c9f0 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc119e200 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc10b9400 - pSliceBuffer: 	19083	 bytes 
+WelsFree(), 0xc0c0cfc0 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c0cd70 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c0d310 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c0d4e0 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc11cae00 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c0d550 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c0d5b0 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c0d610 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc11b7400 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c0dbe0 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c0d990 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c0df30 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c0e100 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc11df400 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c0e170 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c0e1d0 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c0e230 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc11cba00 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c0e800 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c0e5b0 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c0eb50 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c0ed20 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc11f3a00 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c0ed90 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c0edf0 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c0ee50 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc11e0000 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c0f420 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c0f1d0 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c0f770 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c0f940 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc1208000 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c0f9b0 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c0fa10 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c0fa70 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc11f4600 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c10040 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c0fdf0 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c10390 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c10560 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc121c600 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c105d0 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c10630 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c10690 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc1208c00 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c10c60 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c10a10 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c10fb0 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c11180 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc1230c00 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c111f0 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c11250 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c112b0 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc121d200 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c11880 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c11630 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c11bd0 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c11da0 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc1245200 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c11e10 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c11e70 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c11ed0 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc1231800 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c124a0 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c12250 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c127f0 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c129c0 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc1259800 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c12a30 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c12a90 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c12af0 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc1245e00 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c130c0 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c12e70 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c13410 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c135e0 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc126de00 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c13650 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c136b0 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c13710 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc125a400 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c13ce0 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c13a90 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c14030 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c14200 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc1282400 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c14270 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c142d0 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c14330 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc126ea00 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c14900 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c146b0 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c14c50 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c14e20 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc1296a00 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c14e90 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c14ef0 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c14f50 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc1283000 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c15520 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c152d0 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c15870 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c15a40 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc12ab000 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c15ab0 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c15b10 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c15b70 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc1297600 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc11b2800 - pSliceBuffer: 	19083	 bytes 
+WelsFree(), 0xc0c16140 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c15ef0 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c16490 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c16660 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc12c4200 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c166d0 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c16730 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c16790 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc12b0800 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c16d60 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c16b10 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c170b0 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c17280 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc12d8800 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c172f0 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c17350 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c173b0 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc12c4e00 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c17980 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c17730 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c17cd0 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c17ea0 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc12ece00 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c17f10 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c17f70 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c17fd0 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc12d9400 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c185a0 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c18350 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c188f0 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c18ac0 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc1301400 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c18b30 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c18b90 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c18bf0 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc12eda00 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c191c0 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c18f70 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c19510 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c196e0 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc1315a00 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c19750 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c197b0 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c19810 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc1302000 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c19de0 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c19b90 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c1a130 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c1a300 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc132a000 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c1a370 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c1a3d0 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c1a430 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc1316600 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c1aa00 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c1a7b0 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c1ad50 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c1af20 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc133e600 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c1af90 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c1aff0 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c1b050 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc132ac00 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c1b620 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c1b3d0 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c1b970 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c1bb40 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc1352c00 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c1bbb0 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c1bc10 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c1bc70 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc133f200 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c1c240 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c1bff0 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c1c590 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c1c760 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc1367200 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c1c7d0 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c1c830 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c1c890 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc1353800 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c1ce60 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c1cc10 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c1d1b0 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c1d380 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc137b800 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c1d3f0 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c1d450 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c1d4b0 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc1367e00 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c1da80 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c1d830 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c1ddd0 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c1dfa0 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc138fe00 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c1e010 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c1e070 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c1e0d0 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc137c400 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc0c1e6a0 - pMbCache->pCoeffLevel: 	843	 bytes 
+WelsFree(), 0xc0c1e450 - pMbCache->pMemPredMb: 	587	 bytes 
+WelsFree(), 0xc0c1e9f0 - pMbCache->pSkipMb: 	459	 bytes 
+WelsFree(), 0xc0c1ebc0 - pMbCache->pMemPredBlk4: 	107	 bytes 
+WelsFree(), 0xc13a4400 - pMbCache->pBufferInterPredMe: 	2635	 bytes 
+WelsFree(), 0xc0c1ec30 - pMbCache->pPrevIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c1ec90 - pMbCache->pRemIntra4x4PredModeFlag: 	91	 bytes 
+WelsFree(), 0xc0c1ecf0 - pMbCache->pDct: 	891	 bytes 
+WelsFree(), 0xc1390a00 - sSliceBs.pBs: 	79915	 bytes 
+WelsFree(), 0xc12abc00 - pSliceBuffer: 	19083	 bytes 
+WelsFree(), 0xc0c1f070 - ppSliceInLayer: 	363	 bytes 
+WelsFree(), 0xc0c1f1e0 - pFirstMbIdxOfSlice: 	363	 bytes 
+WelsFree(), 0xc0c1f350 - pCountMbNumInSlice: 	363	 bytes 
+WelsFree(), 0xc13a5000 - pSliceSeg->pOverallMbMap: 	7275	 bytes 
+WelsFree(), 0xc0c039a0 - pDqLayer: 	587	 bytes 
+WelsFree(), 0xc0c03420 - ppDqLayerList: 	83	 bytes 
+WelsFree(), 0x1e32000 - pPic->pBuffer: 	1580619	 bytes 
+WelsFree(), 0xc1089c00 - pPic->uiRefMbType: 	14475	 bytes 
+WelsFree(), 0xc108d600 - pPic->pRefMbQp: 	3675	 bytes 
+WelsFree(), 0xc108e600 - pPic->sMvList: 	14475	 bytes 
+WelsFree(), 0xc1092000 - pPic->pMbSkipSad: 	14475	 bytes 
+WelsFree(), 0xc0c03620 - pPic: 	211	 bytes 
+WelsFree(), 0x1fb4000 - pPic->pBuffer: 	1580619	 bytes 
+WelsFree(), 0xc1095a00 - pPic->uiRefMbType: 	14475	 bytes 
+WelsFree(), 0xc1099400 - pPic->pRefMbQp: 	3675	 bytes 
+WelsFree(), 0xc109a400 - pPic->sMvList: 	14475	 bytes 
+WelsFree(), 0xc109de00 - pPic->pMbSkipSad: 	14475	 bytes 
+WelsFree(), 0xc0c03700 - pPic: 	211	 bytes 
+WelsFree(), 0x2136000 - pPic->pBuffer: 	1580619	 bytes 
+WelsFree(), 0xc10a1800 - pPic->uiRefMbType: 	14475	 bytes 
+WelsFree(), 0xc10a5200 - pPic->pRefMbQp: 	3675	 bytes 
+WelsFree(), 0xc10a6200 - pPic->sMvList: 	14475	 bytes 
+WelsFree(), 0xc10a9c00 - pPic->pMbSkipSad: 	14475	 bytes 
+WelsFree(), 0xc0c037e0 - pPic: 	211	 bytes 
+WelsFree(), 0x22b8000 - pPic->pBuffer: 	1580619	 bytes 
+WelsFree(), 0xc10ad600 - pPic->uiRefMbType: 	14475	 bytes 
+WelsFree(), 0xc10b1000 - pPic->pRefMbQp: 	3675	 bytes 
+WelsFree(), 0xc10b2000 - pPic->sMvList: 	14475	 bytes 
+WelsFree(), 0xc10b5a00 - pPic->pMbSkipSad: 	14475	 bytes 
+WelsFree(), 0xc0c038c0 - pPic: 	211	 bytes 
+WelsFree(), 0xc0c03480 - pRefList: 	403	 bytes 
+WelsFree(), 0xc0c033c0 - ppRefPicListExt: 	83	 bytes 
+WelsFree(), 0xc105e000 - pVaa->pVaaBackgroundMbFlag: 	3675	 bytes 
+WelsFree(), 0xc105f000 - pVaa->sVaaCalcInfo.sad8x8: 	57675	 bytes 
+WelsFree(), 0xc106d200 - pVaa->sVaaCalcInfo.pSsd16x16: 	14475	 bytes 
+WelsFree(), 0xc1070c00 - pVaa->sVaaCalcInfo.pSum16x16: 	14475	 bytes 
+WelsFree(), 0xc1074600 - pVaa->sVaaCalcInfo.pSumOfSquare16x16: 	14475	 bytes 
+WelsFree(), 0xc1078000 - pVaa->sVaaCalcInfo.pSumOfDiff8x8: 	57675	 bytes 
+WelsFree(), 0xc1086200 - pVaa->sVaaCalcInfo.pMad8x8: 	14475	 bytes 
+WelsFree(), 0xc0c03260 - pVaa: 	339	 bytes 
+WelsFree(), 0xc0c1f660 - pWelsSvcRc->pTemporalOverRc: 	631	 bytes 
+WelsFree(), 0xc0c030a0 - pWelsSvcRc: 	435	 bytes 
+WelsFree(), 0xc13a6e00 - pMvdCostTable: 	108339	 bytes 
+WelsFree(), 0xc1000000 - SWelsSvcCodingParam: 	1307	 bytes 
+WelsFree(), 0xc1031800 - SWelsFuncPtrList: 	1355	 bytes 
